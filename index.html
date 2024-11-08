@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Esercizi JavaScript e HTML</title>
+    <link rel="stylesheet" href="styles.css">
+    <style>
+        .nuovaClasse {
+            border: 1px solid red;
+        }
+        .classeDaNascondere {
+            color: blue;
+        }
+    </style>
+</head>
+<body>
+    <!-- Esercizio 1 -->
+    <div class="container">
+        <h3>Esercizio 1</h3>
+        <div id="es1"></div>
+        <button onclick="esercizio1()">Genera Div</button>
+    </div>
+
+    <!-- Esercizio 2 -->
+    <div class="container">
+        <h3>Esercizio 2</h3>
+        <div id="es2"></div>
+        <button onclick="esercizio2()">Genera P</button>
+    </div>
+
+    <!-- Esercizio 3 -->
+    <div class="container">
+        <h3>Esercizio 3</h3>
+        <div id="es3"></div>
+        <button onclick="esercizio3()">Genera Img</button>
+    </div>
+
+    <!-- Esercizio 4 -->
+    <div class="container">
+        <h3>Esercizio 4</h3>
+        <div id="es4"></div>
+        <button onclick="esercizio4()">Genera Lista</button>
+    </div>
+
+    <!-- Esercizio 5 -->
+    <div class="container">
+        <h3>Esercizio 5</h3>
+        <div id="es5"></div>
+        <button onclick="esercizio5()">Genera Link</button>
+    </div>
+
+    <!-- Esercizio 6 -->
+    <div class="container">
+        <h3>Esercizio 6</h3>
+        <div id="es6">
+            <form id="modulo"></form>
+        </div>
+        <button onclick="esercizio6()">Genera Input</button>
+    </div>
+
+    <!-- Esercizio 7 -->
+    <div class="container">
+        <h3>Esercizio 7</h3>
+        <div id="es7"></div>
+        <button onclick="esercizio7()">Genera Bottone</button>
+    </div>
+
+    <!-- Esercizio 8 -->
+    <div class="container">
+        <h3>Esercizio 8</h3>
+        <div id="es8"></div>
+        <button onclick="esercizio8()">Genera Tabella</button>
+    </div>
+
+    <!-- Esercizio 9 -->
+    <div class="container">
+        <h3>Esercizio 9</h3>
+        <div id="es9"></div>
+        <button onclick="esercizio9()">Genera Option</button>
+    </div>
+
+    <!-- Esercizio 10 -->
+    <div class="container">
+        <h3>Esercizio 10</h3>
+        <div id="es10"></div>
+        <button onclick="esercizio10()">Avvia funzione</button>
+    </div>
+
+    
+        <h2>Esercizio 11: Cambiare il colore di sfondo di un elemento</h2>
+        <button onclick="cambiaColoreSfondo()">Cambia Colore di Sfondo</button>
+        <div id="elemento" style="width: 100px; height: 100px; background-color: lightblue;">Contenuto</div>
+    
+        <hr>
+    
+        <h2>Esercizio 12: Cambiare il colore del testo di un elemento</h2>
+        <button onclick="cambiaColoreTesto()">Cambia Colore del Testo</button>
+        <div id="testo" style="font-size: 20px;">Testo di esempio</div>
+    
+        <hr>
+    
+        <h2>Esercizio 13: Cambiare la larghezza e l’altezza di un elemento</h2>
+        <button onclick="cambiaDimensioni()">Cambia Larghezza e Altezza</button>
+        <div id="dimensione" style="width: 100px; height: 100px; background-color: lightgreen;">Contenuto</div>
+    
+        <hr>
+    
+        <h2>Esercizio 14: Cambiare il font-size di un elemento</h2>
+        <button onclick="cambiaFontSize()">Cambia Font Size</button>
+        <p id="paragrafo">Testo di esempio per il font-size.</p>
+    
+        <hr>
+    
+        <h2>Esercizio 15: Cambiare il margine interno (padding) di un elemento</h2>
+        <button onclick="cambiaPadding()">Cambia Padding</button>
+        <div id="contenitore" style="padding: 10px; background-color: lightcoral;">Contenuto con padding</div>
+    
+        <hr>
+    
+        <h2>Esercizio 16: Cambiare il colore di sfondo di tutti gli elementi con una determinata classe</h2>
+        <button onclick="cambiaSfondoClasse()">Cambia Sfondo Classe</button>
+        <div class="box" style="width: 100px; height: 100px; background-color: lightblue;">Box 1</div>
+        <div class="box" style="width: 100px; height: 100px; background-color: lightblue;">Box 2</div>
+        <div class="box" style="width: 100px; height: 100px; background-color: lightblue;">Box 3</div>
+    
+        <hr>
+    
+        <h2>Esercizio 17: Cambiare il font-size e il colore del testo di tutti gli elementi di un tag specifico</h2>
+        <button onclick="modificaTag()">Modifica Tutti i P</button>
+        <p>Paragrafo 1</p>
+        <p>Paragrafo 2</p>
+        <p>Paragrafo 3</p>
+    
+        <hr>
+    
+        <h2>Esercizio 18: Ottenere un elemento per ID e stamparne il contenuto</h2>
+        <p id="elemento1">Questo è un elemento con ID</p>
+        <button onclick="stampaContenuto()">Stampa Contenuto</button>
+    
+        <hr>
+    
+        <h2>Esercizio 19: Ottenere il valore di un input di testo</h2>
+        <input type="text" id="inputTesto" placeholder="Inserisci testo">
+        <button onclick="ottieniValoreInput()">Ottieni Valore</button>
+    
+        <hr>
+    
+        <h2>Esercizio 20: Ottenere il valore selezionato di un elemento select</h2>
+        <select id="selezione">
+            <option value="Opzione 1">Opzione 1</option>
+            <option value="Opzione 2">Opzione 2</option>
+            <option value="Opzione 3">Opzione 3</option>
+        </select>
+        <button onclick="ottieniValoreSelect()">Ottieni Valore Selezionato</button>
+    
+        <hr>
+    
+        <h2>Esercizio 21: Ottenere il valore di un elemento checkbox</h2>
+        <input type="checkbox" id="checkbox1"> Accetta
+        <button onclick="ottieniValoreCheckbox()">Ottieni Valore Checkbox</button>
+    
+        <hr>
+    
+        <h2>Esercizio 22: Ottenere il valore di un elemento radio selezionato</h2>
+        <input type="radio" name="opzione" value="Opzione 1"> Opzione 1
+        <input type="radio" name="opzione" value="Opzione 2"> Opzione 2
+        <button onclick="ottieniValoreRadio()">Ottieni Valore Radio</button>
+    
+        <hr>
+    
+        <h2>Esercizio 23: Ottenere tutti gli elementi figli di un elemento padre e aggiungere loro una classe</h2>
+        <div id="padre">
+            <p>Figlio 1</p>
+            <p>Figlio 2</p>
+            <p>Figlio 3</p>
+        </div>
+        <button onclick="aggiungiClasse()">Aggiungi Classe ai Figli</button>
+    
+        <hr>
+    
+        <h2>Esercizio 24: Ottenere il primo elemento figlio di un elemento padre e modificare il suo testo</h2>
+        <div id="padre2">
+            <p>Figlio 1</p>
+            <p>Figlio 2</p>
+            <p>Figlio 3</p>
+        </div>
+        <button onclick="modificaPrimoFiglio()">Modifica Primo Figlio</button>
+    
+        <hr>
+    
+        <h2>Esercizio 25: Ottenere tutti gli elementi che hanno una classe specifica all'interno di un elemento e nasconderli</h2>
+        <div id="padre3">
+            <p class="nascondi">Element 1</p>
+            <p class="nascondi">Element 2</p>
+            <p class="mostra">Element 3</p>
+        </div>
+        <button onclick="nascondiElementi()">Nascondi Elementi con Classe "nascondi"</button>
+       
+
+    <!-- Collegamento al file JavaScript -->
+    <script src="js/java.js"></script>
+</body>
+</html>
